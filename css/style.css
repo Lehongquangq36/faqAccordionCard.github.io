@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%; 
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #000;
+    background: linear-gradient(to bottom ,#af68ea , #6462e7) ;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+ul {
+    list-style-type: none;
+}
+.wrapper { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.container {
+    width: 760px; 
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+}
+.card {
+    margin: 50px 50px 50px 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    padding: 50px auto;
+}
+.card__image {
+    flex-basis: 50%;
+}
+.card__image img {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    left: -8%;
+}
+.card__faq {
+    flex-basis: 50%;
+    width: 50%;
+}
+.card__box {
+    position: absolute;
+    top: 40%;
+    left: -12%;
+}
+.card__box img{
+    max-width: 90%;
+    height: auto;
+}
+.card__faq h2 {
+    font-size: 1.75em;
+    padding: 10px 0;
+}
+ul.list-question li{
+    word-spacing: 1px;
+    font-size: 1.2em;
+    margin: 13px auto;
+}
+ul.list-question li .question {
+  text-align: left;
+   cursor: pointer;
+   color: #6c6b70;
+}
+ul.list-question li .question:hover {
+    color: #000;
+}
+.question:after {
+    font-family: FontAwesome;
+    content : "\f107";
+    float: right;
+    font-size: 16px;
+    color: #ff0000;
+}
+.active:after {
+    content : "\f106";
+}
+.mobile {
+    display: none;
+}
+.answer {
+    color: #8e8d92;
+    font-size: 0.8em;
+    margin: 5px auto;
+    overflow: hidden;
+    max-height: 0;
+}
+.show {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+@media only screen and (max-width : 992px)  {
+    .container {
+        width: 580px; 
+    }
+    .card {
+        margin: 50px 25px 50px 0;
+    }
+    .card__image {
+        flex-basis: 45%;
+    }
+    .card__faq {
+        flex-basis: 55%;    
+    }
+    .card__box {  
+        top: 35%;
+        left: -13%;
+    }
+    .card__box img{
+        max-width: 70%;
+    }
+    .card__faq h2 {
+        font-size: 1.5em;
+    }
+    ul.list-question li{
+        font-size: 1em;
+        margin: 14px auto;
+    }
+}
+@media only screen and (max-width : 672px ){
+    .container {
+        width: 80%; 
+        height: auto;
+    }
+    .card {
+        margin: 10px;
+        height: auto;
+        flex-direction: column;
+        overflow: visible;
+    }
+    .card__image {
+        display: none;
+    }
+    .card__faq {
+        flex-basis: 100%;
+        width: 100%;
+        padding: 10vw 1vw;
+    }
+    .card__box {
+        display: none;
+    }
+    .card__faq h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 10px 0;
+    }
+    ul.list-question li{
+        word-spacing: 1px;
+        font-size: 0.7em;
+        margin: 13px auto;
+    }
+    ul.list-question li .question {
+       display: flex;
+       justify-content: space-between;
+    }
+    p.content-question {
+        flex-basis: 95%;
+        margin-right: 2px;
+     }
+    p.icon-arrow {
+        flex-basis: 5%;
+        margin-left: 2px;
+    }
+    .mobile {
+        position: absolute;
+        top: -5%;
+        transform: translate(-50% , -50%);
+        left: 50%;
+        display: block;
+    }
+    .mobile__box img{
+        position: absolute;
+        top: 30%;
+        left: -10%;
+    }
+}
+@media only screen and (max-height : 548px) {
+    .container {
+        width: 560px; 
+    }
+    .card {
+        margin: 50px 25px 50px 0;
+    }
+    .card__image {
+        flex-basis: 45%;
+    }
+    .card__faq {
+        flex-basis: 55%;    
+    }
+    .card__box {  
+        top: 35%;
+        left: -13%;
+    }
+    .card__box img{
+        max-width: 70%;
+    }
+    .card__faq h2 {
+        font-size: 1.5em;
+    }
+    ul.list-question li{
+        font-size: 1em;
+        margin: 14px auto;
+    }
+}
+@media only screen and (max-width : 672px ) and (max-height : 548px) {
+    .container {
+        margin: 10px;
+    }
+    .card {
+        margin: 0px 10%;
+        padding: 10px;
+    }
+    .card__faq {
+        padding: 0;
+        
+    }
+    .card__faq h2 {
+        padding: 0;
+    }
+    .list-question li {
+        margin: 0 auto;
+    }
+    .card__image {
+        display: none;
+    }
+    .mobile {
+        display: none;
+    }
+}
